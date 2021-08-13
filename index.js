@@ -116,7 +116,26 @@ function getAverageIMDBRating(movies) {
  *  countByRating(movies);
  *  //> { G: 3, PG: 7 }
  */
-function countByRating(movies) {}
+function countByRating(movies) {
+  // //declare a var and assign it an empty obj
+  // let obj = {};
+  // // if there are no movies
+  // if (movies.length === 0) {
+  //   //return the var
+  //   return obj;
+  // }
+  // //for of loop through movies
+  // for (const rating of movies) {
+  //   rating.rated += 1;
+  //   // //if the var with the movie in it
+  //   // if (obj[rating].rated) {
+  //   //   //then its that += 1
+  //   //   obj[rating].rated += 1;
+  //   // }
+  // }
+  // //return the var
+  // return obj;
+}
 
 /**
  * findById()
@@ -132,7 +151,25 @@ function countByRating(movies) {}
       // Toy Story 4
     };
  */
-function findById(movies, id) {}
+function findById(movies, id) {
+  //create a var, assign it an empty object
+  let obj = {};
+  //if movies isnt there
+  if (movies.length === 0) {
+    //return null
+    return null;
+  }
+  //for loop through movies
+  for (const movie of movies) {
+    //if the imdbID matches id
+    if (movie.imdbID === id) {
+      //then return the movie in the object
+      obj = movie;
+    }
+  }
+  //return the object
+  return obj;
+}
 
 /**
  * filterByGenre()
