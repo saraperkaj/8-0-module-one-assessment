@@ -260,7 +260,7 @@ function getAllMoviesReleasedAtOrBeforeYear(movies, year) {
  */
 function getBiggestBoxOfficeMovie(movies) {
   //declare a var named current and set it to 0
-  let current = 0;
+  let current = movies[0];
   //if there are no movies
   if (movies.length === 0) {
     //return null
@@ -273,15 +273,15 @@ function getBiggestBoxOfficeMovie(movies) {
     movie.boxOffice.replaceAll("$", "");
     Number(movie.boxOffice);
     //if the box office amount is more than the current
-    if (movie.boxOffice > current) {
+    if (movie.boxOffice > current.boxOffice) {
       //then the current is now the box office amount bc its the highest
-      current = boxOffice;
+      current = movie.boxOffice;
     }
-  }
-  //outside of the loop if its the current
-  if (current) {
-    //then return the name of the movie
-    return movie.title;
+    //outside of the loop if its the current
+    if (current) {
+      //then return the name of the movie
+      return current.title;
+    }
   }
 }
 
