@@ -87,7 +87,9 @@ function getHighestMetascore(movies) {
 function getAverageIMDBRating(movies) {
   //declare a var and assign it 0
   let average = 0;
+  //if the movie isnt there
   if (movies.length === 0) {
+    //just return 0
     return 0;
   }
   //for of loop through movies
