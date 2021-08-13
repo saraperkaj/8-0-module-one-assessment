@@ -268,7 +268,9 @@ function getBiggestBoxOfficeMovie(movies) {
   }
   //for of loop through movies
   for (const movie of movies) {
-    //make the box office a number
+    //make the box office a number with no commas and no dollar sign
+    movie.boxOffice.replaceAll(",", "");
+    movie.boxOffice.replaceAll("$", "");
     Number(movie.boxOffice);
     //if the box office amount is more than the current
     if (movie.boxOffice > current) {
