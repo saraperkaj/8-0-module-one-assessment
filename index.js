@@ -117,24 +117,26 @@ function getAverageIMDBRating(movies) {
  *  //> { G: 3, PG: 7 }
  */
 function countByRating(movies) {
-  // //declare a var and assign it an empty obj
-  // let obj = {};
-  // // if there are no movies
-  // if (movies.length === 0) {
-  //   //return the var
-  //   return obj;
-  // }
-  // //for of loop through movies
-  // for (const rating of movies) {
-  //   rating.rated += 1;
-  //   // //if the var with the movie in it
-  //   // if (obj[rating].rated) {
-  //   //   //then its that += 1
-  //   //   obj[rating].rated += 1;
-  //   // }
-  // }
-  // //return the var
-  // return obj;
+  //declare a var and assign it an empty obj
+  let obj = {};
+  // if there are no movies
+  if (movies.length === 0) {
+    //return the var
+    return obj;
+  }
+  //for of loop through movies
+  for (let i = 0; i < movies.length; i++) {
+    const movie = movies[i].rated;
+    //if the var with the movie in it
+    if (obj[movie]) {
+      //then its that += 1
+      obj[movie] += 1;
+    } else {
+      obj[movie] = 1;
+    }
+  }
+  //return the var
+  return obj;
 }
 
 /**
@@ -161,11 +163,12 @@ function findById(movies, id) {
   }
   //for loop through movies
   for (const movie of movies) {
-    //if the imdbID matches id
-    if (movie.imdbID === id) {
-      //then return the movie in the object
-      obj = movie;
-    }
+    // //if the imdbID matches id
+    // if (movie.imdbID === id) {
+    //   //then return the movie in the object
+    //   obj = movie;
+    // }
+    movie.imdbID === id ? (obj = movie) : null;
   }
   //return the object
   return obj;
