@@ -197,11 +197,6 @@ function findById(movies, id) {
 function filterByGenre(movies, givenGenre) {
   //declare a var assign it an empty array
   let array = [];
-  //if there are no movies
-  if (movies.length === 0) {
-    //return var
-    return array;
-  }
   //for of loop through movies
   for (const movie of movies) {
     //if the movie genre .includes the given genre
@@ -236,7 +231,21 @@ function filterByGenre(movies, givenGenre) {
       }
     ];
  */
-function getAllMoviesReleasedAtOrBeforeYear(movies, year) {}
+function getAllMoviesReleasedAtOrBeforeYear(movies, year) {
+  //declare a var, assign it an empty arr
+  let arr = [];
+
+  //for of loop through the movies
+  for (const movie of movies) {
+    //if the movie is released less than or equal to =< the given year
+    if (movie.released.split(" ")[2] <= year) {
+      //then push the movie into the arr
+      arr.push(movie);
+    }
+  }
+  //return the var
+  return arr;
+}
 
 /**
  * getBiggestBoxOfficeMovie()
