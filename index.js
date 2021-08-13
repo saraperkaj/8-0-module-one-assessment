@@ -200,7 +200,7 @@ function filterByGenre(movies, givenGenre) {
   //for of loop through movies
   for (const movie of movies) {
     //if the movie genre .includes the given genre
-    if (movie.genre.includes(givenGenre)) {
+    if (movie.genre.toLowerCase().includes(givenGenre.toLowerCase())) {
       //then push the movies in the array
       array.push(movie);
     }
