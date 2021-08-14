@@ -287,6 +287,39 @@ function getAllMoviesReleasedAtOrBeforeYear(movies, year) {
  *  //> "Incredibles 2"
  */
 function getBiggestBoxOfficeMovie(movies) {
+  //if there arent any movies
+  //retirn null
+  //
+  // //if there arent any movies
+  // if (movies.length === 0) {
+  //   //return null
+  //   return null;
+  // }
+  // //make a var and set it to 0 (current Box Office Amount)
+  // let currentBOA = 0;
+  // //the movie with the biggest box office amount
+  // let biggetsBOA;
+  // //for of loop through movies
+  // for (const movie of movies) {
+  //   //make the box office amount a number without commas and $
+  //   movie.boxOffice.replaceAll(",", "");
+  //   movie.boxOffice.replaceAll("$", "");
+  //   //let the box office amount be a number
+  //   let BOA = Number(movie.boxOffice);
+  //   //if the box office amount is more than the var
+  //   if (BOA > currentBOA) {
+  //     //then the var is that box office amount
+  //     currentBOA = BOA;
+  //   }
+  //   //if the var
+  //   if (currentBOA) {
+  //     //then return THAT movie attached to the var
+  //     biggetsBOA = movie.title;
+  //   }
+  // }
+  // //return the movie with the biggest boa
+  // return biggetsBOA;
+
   //declare a var named current and set it to 0
   let current = movies[0];
   //if there are no movies
