@@ -154,24 +154,39 @@ function countByRating(movies) {
     };
  */
 function findById(movies, id) {
-  //create a var, assign it an empty object
-  let obj = {};
-  //if movies isnt there
+  //if the movie isnt there
   if (movies.length === 0) {
     //return null
     return null;
   }
-  //for loop through movies
+  //for of loop through movies
   for (const movie of movies) {
-    // //if the imdbID matches id
-    // if (movie.imdbID === id) {
-    //   //then return the movie in the object
-    //   obj = movie;
-    // }
-    movie.imdbID === id ? (obj = movie) : null;
+    //if the movie starting at the first index [0] with the imdb ID is equal to the given id
+    if (movie.imdbID === id) {
+      //then return the movie and all its info
+      return movie;
+    }
   }
-  //return the object
-  return obj;
+  return null;
+
+  // //create a var, assign it an empty object
+  // let obj = {};
+  // //if movies isnt there
+  // if (movies.length === 0) {
+  //   //return null
+  //   return null;
+  // }
+  // //for loop through movies
+  // for (const movie of movies) {
+  //   // //if the imdbID matches id
+  //   // if (movie.imdbID === id) {
+  //   //   //then return the movie in the object
+  //   //   obj = movie;
+  //   // }
+  //   movie.imdbID === id ? (obj = movie) : null;
+  // }
+  // //return the object
+  // return obj;
 }
 
 /**
